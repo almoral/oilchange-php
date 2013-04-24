@@ -5,14 +5,18 @@
 		<title>Oil Change</title>
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
     <style type="text/css">
+      body{
+        margin: 0;
+      }
+
       #oilChangeBody{
         background: url(images/oilchange.jpg);
         background-repeat: no-repeat;
         height: 400px;
-        width: 400px;
+        width: 600px;
         color: #fff;
         font-family: helvetica, arial, sans-serif;
-        padding: 100px 0 0 25px;
+        padding: 100px 0 0 125px;
         margin: 0 auto;
       }
       
@@ -36,6 +40,14 @@
 
       h2{
         color: #fff;
+        font-weight: normal;
+        font-size: 18px;
+        margin-bottom: 5px;
+      }
+
+      #mileage{
+        margin: 0;
+        font-size: 24px;
       }
 
     </style>
@@ -64,6 +76,9 @@
 
 <script type="text/javascript">
 
+  function numberWithCommas(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  }
 
   function capitalizeFirstLetter(string){
     return string.charAt(0).toUpperCase() + string.slice(1);
@@ -144,7 +159,7 @@
 
         if(data.length == 2 && data[0] == ""){
 
-        	$("#mileage").text(data[1]);
+        	$("#mileage").text(numberWithCommas(data[1]));
         }
 
       }
