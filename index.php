@@ -4,17 +4,59 @@
 	<head>
 		<title>Oil Change</title>
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+    <style type="text/css">
+      #oilChangeBody{
+        background: url(images/oilchange.jpg);
+        background-repeat: no-repeat;
+        height: 400px;
+        width: 400px;
+        color: #fff;
+        font-family: helvetica, arial, sans-serif;
+        padding: 100px 0 0 25px;
+      }
+      
+      form{
+        background: rgba(0, 0, 0, .25);
+        padding: 10px;
+        width: 330px;
+        border-radius: 5px;
+      }
+
+      select{
+        width: 150px;
+        margin-top: -10px;
+      }
+
+      label{
+        display: inline-block;
+        margin: 10px 0 0 0;
+      }
+
+      h2{
+        color: #fff;
+      }
+
+    </style>
 	</head>
 	<body>
 	<div id="oilChangeBody">
 		<form>
-	<select id="year" name="year"><? echo $dd; ?></select>
+	<label for="year">Select a year:</label> <br/>
+  <select id="year" name="year"><? echo $dd; ?></select> <br/>
 	
-<select id="makes" name="makes"><? echo $make; ?></select>
+  <label for="makes">Select a make:</label><br/>
+<select id="makes" name="makes"><? echo $make; ?></select> <br />
 
-<select id="models" name="models"><? echo $model; ?></select>
+<label for="models">Select a model:</label><br/>
+<select id="models" name="models"><? echo $model; ?></select> <br />
 
-<div id="mileage" name="mileage"><? echo $mileage; ?></div>
+
+<div name="mileage">
+  <h2>Recommended mileage:</h2>
+  <p id="mileage">
+  <? echo $mileage; ?>
+  </p>
+</div>
 </form>
 </div>
 
