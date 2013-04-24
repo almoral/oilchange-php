@@ -13,9 +13,11 @@
         color: #fff;
         font-family: helvetica, arial, sans-serif;
         padding: 100px 0 0 25px;
+        margin: 0 auto;
       }
       
       form{
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=25)";
         background: rgba(0, 0, 0, .25);
         padding: 10px;
         width: 330px;
